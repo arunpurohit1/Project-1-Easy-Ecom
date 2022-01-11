@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry Form</title>
+    <style>
+        body{
+            background-color: darkcyan;
+        }
+        form{
+            text-align: center;
+            margin-top: 15%;
+        }
+        input{
+            border: 1px solid black;
+            font-size: larger;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        label{
+            color: black;
+            font-size: x-large;
+            
+        }
+        option{
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <form action="data.php" method="post">
+        <b>
+        <label for="username">Name:</label><br><p></p>
+        <input type="text" name="username"  required><br>
+        <p></p>
+        <label for="useremail">Email:</label><br><p></p>
+        <input type="text" name="useremail"  required><br>
+        <p></p>
+        <label for="userdob">DOB:</label><br><p></p>
+        <input type="text" name="userdob"  required><br>
+        <p></p>
+        <label for="userconfig">User/Admin:</label><br><p></p>
+        <select name="userconfig" id=""><br>
+            <option value="User">User</option>
+            <option value="Admin">Admin</option>
+        </select><br>
+        <p></p>
+        <br>
+        <button>Submit</button>
+         </b>
+    </form>
+</body>
+</html>
