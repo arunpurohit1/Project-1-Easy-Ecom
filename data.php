@@ -9,10 +9,10 @@
 <body>
     <?php include "form.html"?>
     <?php  
-      $name = $_POST["username"];
-      $email = $_POST["useremail"];
-      $dob = $_POST["userdob"];
-      $userconfig = $_POST["userconfig"];
+      $name = !empty($_POST['username']) ? $_POST['username'] : '';
+      $email = !empty($_POST['useremail']) ? $_POST['useremail'] : '';
+      $dob = !empty($_POST['userdob']) ? $_POST['userdob'] : '';
+      $userconfig = !empty($_POST['userconfig']) ? $_POST['userconfig'] : '';
     ?>
 
      <?php
@@ -52,12 +52,12 @@ if ($conn->query($sql) === TRUE) {
 }
 
 if ("$userconfig" == "Admin"){
-  header("Location: http://localhost/PHP-Project/admin.php", true, 301);
+  header("Location: http://localhost/Project-1-EASY-ECOM-MASTER/admin.php", true, 301);
   exit();
 }
 
 if ("$userconfig" == "User"){
-  header("Location: http://localhost/PHP-Project/User.php", true, 301);
+  header("Location: http://localhost/Project-1-EASY-ECOM-MASTER/user.php", true, 301);
   exit();
 }
 

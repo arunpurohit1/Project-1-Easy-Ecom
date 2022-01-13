@@ -50,8 +50,8 @@
     $password = "";
     $database = "user";
 
-    $name = $_POST["username"];
-    $email = $_POST["useremail"];
+    $name = !empty($_POST['username']) ? $_POST['username'] : '';
+    $email = !empty($_POST['useremail']) ? $_POST['useremail'] : '';
 // Create connection
 $conn = mysqli_connect($servername, $username, $password , $database);
 
